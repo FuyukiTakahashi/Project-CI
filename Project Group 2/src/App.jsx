@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Cart from "./components/Cart/Cart";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Details from "./pages/Details";
+import About from "./pages/About";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/productlist" element={<ProductList/>}/>
         <Route path="/detail" element={<Details/>}/>
+        <Route path="/about" element={<About/>}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>

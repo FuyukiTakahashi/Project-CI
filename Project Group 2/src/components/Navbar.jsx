@@ -86,21 +86,22 @@ const Navbar = () => {
           <NavLink style={{textDecoration:"none"}} to={'home'}><Logo>LAMA</Logo></NavLink>
         </Center>
         <Right>
-          <MenuItem><NavLink style={{textDecoration:"none"}} to='register' className={handleActive}>REGISTER</NavLink></MenuItem>
-          <MenuItem><NavLink style={{textDecoration:"none"}} to='login' className={handleActive}>LOG IN</NavLink></MenuItem>
+          <MenuItem><NavLink style={{textDecoration:"none"}} to='/about' className={handleActive} >ABOUT US</NavLink></MenuItem>
+          <MenuItem><NavLink style={{textDecoration:"none"}} to='/register' className={handleActive}>REGISTER</NavLink></MenuItem>
+          <MenuItem><NavLink style={{textDecoration:"none"}} to='/login' className={handleActive}>LOG IN</NavLink></MenuItem>
           <MenuItem> 
             <ProductConsumer>
               {value=>{
                  const {cart} = value;
                  if (cart.length > 0){
                   return (
-                  <Link to='cart'>
+                  <Link to='/cart'>
                     <Badge badgeContent={cart.length} color="primary">
                       <ShoppingCartOutlined />
                     </Badge>
                   </Link>);
               } else { return(
-                <Link to='cart' >
+                <Link to='/cart' >
                     <Badge color="primary">
                       <ShoppingCartOutlined />
                     </Badge>
